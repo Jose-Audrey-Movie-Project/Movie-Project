@@ -1,22 +1,23 @@
 const getUserInputMovie = async(userMovieInput) => {
     try {
-        const url = `https://www.themoviedb.org/search/movie?query=${userMovieInput}`;
+        const url = `https://api.themoviedb.org/3/search/movie?query=${userMovieInput}`;
         const options = {
             method: 'GET',
             headers: {
                 accept: 'application/json',
-                Authorization: `Bearer ${movieReadToken}`
+                Authorization: `Bearer ${MovieReadToken}`
             }
         }
         const response = await fetch(url, options)
-        const data = await response.json()
-        return data;
+        const data =  await response.json();
+        const movies = await  data.results
+        return movies
+
     } catch(error) {
         console.log(error.message);
     }
 };
-(async()=>{
-    const events = getUserInputMovie('Barbie');
-    console.log(events);
-
-})();
+// (async()=>{
+//     const events = await getUserInputMovie('Barbie');
+//     console.log(events);
+// })();
