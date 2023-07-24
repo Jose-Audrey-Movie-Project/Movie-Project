@@ -1,3 +1,4 @@
+// api call for searching a movie name
 const getUserInputMovie = async(userMovieInput) => {
     try {
         const url = `https://api.themoviedb.org/3/search/movie?query=${userMovieInput}`;
@@ -10,14 +11,11 @@ const getUserInputMovie = async(userMovieInput) => {
         }
         const response = await fetch(url, options)
         const data =  await response.json();
-        const movies = await  data.results
-        return movies
+        return await data.results
 
     } catch(error) {
+        alert('something here')
         console.log(error.message);
+
     }
 };
-// (async()=>{
-//     const events = await getUserInputMovie('Barbie');
-//     console.log(events);
-// })();
