@@ -1,4 +1,4 @@
 *.iml
-.idea/*
+../../.idea/aws.xml
 .DS_Store
 keys.js
