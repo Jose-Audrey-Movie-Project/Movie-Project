@@ -38,7 +38,6 @@ searchBTN.addEventListener('click', async () =>{
     const events = await getUserInputMovie(userSearch);
     console.log(events);
 
-=======
     events.forEach((movie) =>{
         movieCards.innerHTML += `
 <div class="card" style="width: 18rem;">

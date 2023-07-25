@@ -72,6 +72,8 @@ const postFavMovies = async (moviedata) =>{
     }
 }
 
+//DELETING FAVORITE MOVIES
+
 
 
 (async () =>{
