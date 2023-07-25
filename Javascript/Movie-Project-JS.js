@@ -37,22 +37,28 @@ searchContainer.addEventListener('keyup', () =>{
 searchBTN.addEventListener('click', async () =>{
     const events = await getUserInputMovie(userSearch);
     console.log(events);
-    movieCards.innerHTML = '';
+
+=======
     events.forEach((movie) =>{
-        let h2 = document.createElement('H2');
-        let p = document.createElement('p');
-        let addbtn = document.createElement('button');
-        let rmvbtn = document.createElement('button');
-        addbtn.classList.add('add-movie');
-        rmvbtn.classList.add('remove-movie');
-        addbtn.textContent = 'add this movie?';
-        rmvbtn.textContent = 'remove this movie?';
-        h2.textContent = movie.original_title;
-        p.textContent = movie.overview;
-        h2.classList.add('card');
-        h2.appendChild(p);
-        p.appendChild(addbtn);
-        p.appendChild(rmvbtn);
-        movieCards.appendChild(h2);
-    });
+        movieCards.innerHTML += `
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">${movie.original_title}</h5>
+    <p class="card-text">${movie.overview}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Movie Release Date: ${movie.release_date}</li>
+    <li class="list-group-item"> Original Language: ${movie.original_language}</li>
+    <li class="list-group-item">Ratings: </li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Add Movie!!</a>
+    <a href="#" class="card-link">Remove Movie?!</a>
+  </div>
+</div>
+
+      
+        `
+    })
 })
