@@ -1,12 +1,5 @@
 {
   "movies": [
-    {
-      "id": 1,
-      "title": "pineapple express"
-    },
-    {
-      "id": 2,
-      "title": "barbie"
-    }
+
   ]
 }

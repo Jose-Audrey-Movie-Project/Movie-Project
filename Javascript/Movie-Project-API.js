@@ -1,5 +1,5 @@
 // api call for searching a movie name
-const getUserInputMovie = async(userMovieInput) => {
+const getUserInputMovie = async (userMovieInput) => {
     try {
         const url = `https://api.themoviedb.org/3/search/movie?query=${userMovieInput}`;
         const options = {
@@ -10,10 +10,10 @@ const getUserInputMovie = async(userMovieInput) => {
             }
         }
         const response = await fetch(url, options)
-        const data =  await response.json();
+        const data = await response.json();
         return await data.results
 
-    } catch(error) {
+    } catch (error) {
         alert('something here')
         console.log(error.message);
 
@@ -21,10 +21,10 @@ const getUserInputMovie = async(userMovieInput) => {
 };
 
 
+
 //api call for storing favorite movies
 
 const domain = ' http://localhost:3000'
-
 
 
 //GETTING FAVORITE MOVIES
@@ -40,18 +40,15 @@ const getFavMovies = async () => {
         const response = await fetch(URL, options);
         const data = response.json()
         return data
-    }
-    catch (error){
+    } catch (error) {
         alert('uh oh')
         console.log(error.message)
     }
 }
 
 
-
-
 //POSTING FAVORITE MOVIES
-const postFavMovies = async (moviedata) =>{
+const postFavMovies = async (moviedata) => {
     try {
         const URL = `${domain}/movies`;
         const options = {
@@ -66,15 +63,14 @@ const postFavMovies = async (moviedata) =>{
         console.log(apiResponse);
         //json.parse()
         return apiResponse;
-    }
-    catch (error){
+    } catch (error) {
         console.log(error.message)
     }
 }
 
 //DELETING FAVORITE MOVIES
 const DeleteFavMovie = async (movieID) => {
-    try{
+    try {
         const URL = `${domain}/movies/${movieID}`;
         const options = {
             method: 'DELETE',
@@ -82,19 +78,18 @@ const DeleteFavMovie = async (movieID) => {
                 'Content-Type': 'application/json'
             },
         };
-        const response =await fetch(URL, options);
+        const response = await fetch(URL, options);
         const data = await response.json()
         return data;
 
-    }
-    catch (error) {
+    } catch (error) {
         console.log(error.message)
     }
 }
 
 //EDITING FAVORITE MOVIES
 const EditFavMovie = async (movieID) => {
-    try{
+    try {
         const URL = `${domain}/movies/${movieID}`
         const options = {
             method: 'PUT',
@@ -105,15 +100,13 @@ const EditFavMovie = async (movieID) => {
         };
         const response = await fetch(URL, options);
         const data = response.json()
-    }
-    catch(error) {
+    } catch (error) {
         console.log(error)
     }
 }
 
 
-
-(async () =>{
+(async () => {
     // const getfavmov = await getFavMovies();
     // console.log(getfavmov);
     // const movie = {
@@ -121,5 +114,4 @@ const EditFavMovie = async (movieID) => {
     // }
     // postFavMovies(movie)
     // const deletemov = await DeleteFavMovie(3)
-
 })();
