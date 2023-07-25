@@ -1,13 +1,9 @@
-git{
+{
   "movies": [
     {
-<<<<<<< HEAD
       "id": "346698",
-      "title": "Barbie"
-=======
-      "title": "a movie",
-      "id": 1
->>>>>>> daa9f4eeeb4ef5487c7c8b91f43b0dece35548a5
+      "title": "Barbie",
+      "description": "Barbie and Ken are having the time of their lives in the colorful and seemingly perfect world of Barbie Land. However, when they get a chance to go to the real world, they soon discover the joys and perils of living among humans."
     }
   ]
 }
