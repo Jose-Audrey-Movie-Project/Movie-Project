@@ -7,7 +7,7 @@ let searchBTN = document.querySelector('#searchBTN');
 let userSearch ='';
 let searchContainer = document.querySelector('#searchbar');
 let movieCards = document.querySelector('#movieCards');
-
+let addMovieToFavs = document.querySelector()
 
 
 
