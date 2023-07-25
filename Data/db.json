@@ -1,8 +1,13 @@
-{
+git{
   "movies": [
     {
+<<<<<<< HEAD
       "id": "346698",
       "title": "Barbie"
+=======
+      "title": "a movie",
+      "id": 1
+>>>>>>> daa9f4eeeb4ef5487c7c8b91f43b0dece35548a5
     }
   ]
 }

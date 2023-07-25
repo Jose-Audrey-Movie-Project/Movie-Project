@@ -24,7 +24,7 @@ const getUserInputMovie = async (userMovieInput) => {
 
 //api call for storing favorite movies
 
-const domain = ' http://localhost:3000'
+const domain = 'http://localhost:3000'
 
 
 //GETTING FAVORITE MOVIES
