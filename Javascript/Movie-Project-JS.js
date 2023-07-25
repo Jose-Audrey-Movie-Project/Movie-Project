@@ -32,9 +32,6 @@ const creatingMovieCards = async () => {
       <button class="add-movie btn" data-movieid="${movie.id}" data-movietitle="${movie.original_title}" data-popularity="${movie.popularity}" data-description="${movie.overview}">
        Add Movie!!
       </button>
-       <button class="remove-movie btn">
-       Remove Movie?!
-      </button>
       </div>
 </div>
 
@@ -51,22 +48,12 @@ const creatingMovieCards = async () => {
                     title: titles,
                     description: descriptions
                 }
-
                 postFavMovies(movie)
-                async function addingmov(movie){
-                let adder = await postFavMovies(movie)
-                    return adder;
-                }
-                addingmov();
             })
         })
     })
 }
 
-const movie = {
-    title: 'a movie'
-}
-console.log(postFavMovies(movie));
 ////////////////////////////////////////////////////////////////////////////////////////////
 /*
 events
