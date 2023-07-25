@@ -52,41 +52,15 @@ searchBTN.addEventListener('click', async () =>{
         </svg>
       </span>
       <p>${movie.overview}</p>
-      <label class="btn" for="toggle">
-        Options
-      </label>
-      <input id="toggle" type="checkbox">
-    </div>
-    <ul class="card-links">
-      <li>
-        <a href="">Add</a>
-      </li>
-      <li>
-        <a href="">Rate</a>
-      </li>
-      <li>
-        <a href="">Remove</a>
-      </li>
-    </ul>
-</div>
+      <div class="btn-holder d-flex justify-center align-center gap-2">
+      <button class="add-movie btn">
+       Add Movie!!
+      </button>
+       <button class="remove-movie btn">
+       Remove Movie?!
+      </button>
+      </div>
 
-
-
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">${movie.original_title}</h5>
-    <p class="card-text">${movie.overview}</p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Movie Release Date: ${movie.release_date}</li>
-    <li class="list-group-item"> Original Language: ${movie.original_language}</li>
-    <li class="list-group-item">Ratings: </li>
-  </ul>
-  <div class="card-body">
-    <a href="#" class="card-link">Add Movie!!</a>
-    <a href="#" class="card-link">Remove Movie?!</a>
-  </div>
 </div>
 
       
