@@ -35,11 +35,24 @@ searchBTN.addEventListener('click', async () =>{
     console.log(events);
     events.forEach((movie) =>{
         movieCards.innerHTML += `
-        <div class = "card">
-            <h2 id="movie-title">${movie.original_title}</h2>
-            <p id="movie-overview"${movie.overview}</p>
-           <span id="add-remove-btns"><button id="add-movie">Add Movie!!</button><button id="remove-movie">Remove Movie!!</button></span> 
-        </div>
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">${movie.original_title}</h5>
+    <p class="card-text">${movie.overview}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Movie Release Date: ${movie.release_date}</li>
+    <li class="list-group-item"> Original Language: ${movie.original_language}</li>
+    <li class="list-group-item">Ratings: </li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Add Movie!!</a>
+    <a href="#" class="card-link">Remove Movie?!</a>
+  </div>
+</div>
+
+      
         `
     })
 
