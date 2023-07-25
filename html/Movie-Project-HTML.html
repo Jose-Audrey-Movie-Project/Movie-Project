@@ -6,22 +6,35 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Movie Project</title>
+<!--    Custom CSS Stylesheet -->
     <link rel="stylesheet" href="../CSS/Movie-Project-Stylesheet.css">
+<!--    Bootstrap Library -->
     <link rel="stylesheet" href="../CSS/bootstrap.css">
 </head>
+
 <body>
 
-
+<!--    Search Bar  -->
 <div class="container">
     <div class="row">
         <div class="col">
-            <div class="d-flex justify-content-center">
-            <input type="text" id="searchbar" placeholder="search a movie boz0o">
-            <button id="searchBTN">search?</button>
+            <div class="d-flex justify-content-center my-5 gap-3">
+                <div class="inputbox">
+                    <input id="searchbar" required="required" type="text">
+                    <span>Search for Movies</span>
+                    <i></i>
+                </div>
+                <button id="searchBTN" class="searchBtn">Search!</button>
             </div>
+        </div>
+        <div class ="col d-flex justify-content-center my-5">
+            <button class="fav-movie-list">Favorite Movies List</button>
         </div>
     </div>
 </div>
+<!--    End Searchbar   -->
+
+<!--    Start Movie cards-->
 <div class="container">
     <div class="row">
         <div class="col">
@@ -31,7 +44,7 @@
         </div>
     </div>
 </div>
-
+<!--End Movie cards-->
 
 <!--start of scripts-->
 <script src="../Javascript/keys.js"></script>
