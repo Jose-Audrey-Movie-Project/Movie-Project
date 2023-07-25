@@ -73,6 +73,21 @@ const postFavMovies = async (moviedata) =>{
 }
 
 //DELETING FAVORITE MOVIES
+const DeleteFavMovie = async (movieTitle) => {
+    try{
+        const URL = `${domain}/movies`;
+        const options = {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        };
+
+    }
+    catch (error) {
+        console.log(error.message)
+    }
+}
 
 
 
