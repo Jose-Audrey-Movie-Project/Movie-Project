@@ -5,7 +5,7 @@
     --cardTextBtn: 106, 16, 88;
     --cardsquares: 156, 113, 227;
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
     place-items: center;
     text-align: center;
     border: 1px solid #ccc;
@@ -14,8 +14,8 @@
     border-radius: 4px;
     background: rgba(var(--cardbg), 1);
     position: relative;
-    width: 220px;
-    height: 310px;
+    width: 100%;
+    height: auto;
     perspective: 1000px;
     z-index: 0;
     transition: all 1s ease-out;
@@ -86,36 +86,10 @@
     top: 1rem;
 }
 
-/* Avatar container */
-.card-info span {
-    color: rgba(var(--cardBase), 1);
-    display: flex;
-    place-items: center;
-    text-align: center;
-    border-radius: 50%;
-    overflow: hidden;
-    background-color: rgba(var(--cardBase), .5);
-    height: 80px;
-    width: 50%;
-    box-shadow: inset 0px 2px 4px rgba(var(--cardBase), .95),
-    inset 0px 2px 40px rgba(var(--cardbg), .95);
-    position: relative;
-    transition: all .3s ease-out .1s;
-    filter: grayscale(75%);
-    z-index: 0;
-}
-
-.card-info span:hover .avatar {
-    scale: 1.5;
-}
-
-.avatar {
-    transition: all .3s ease-out;
-    position: relative;
-}
 
 /* Inner card container and UI */
 .card-info {
+    width: 100%;
     --angle: 0deg;
     display: flex;
     flex-flow: column nowrap;
@@ -136,13 +110,12 @@
     color: rgba(var(--cardText), 1);
     line-height: 1.25em;
     display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
     -webkit-line-clamp: 3;
     font-size: 1em;
     margin: 1em 0;
     transition: all .3s ease-out .3s;
+    width: 100%;
+    height: auto;
 }
 
 .card-info .btn {
