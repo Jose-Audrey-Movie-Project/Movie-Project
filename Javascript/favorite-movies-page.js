@@ -1,26 +1,68 @@
-"use strict"
-const getMovieList = async (favMovies) => {
-    try{
-        const URL = `/Data/db.json`;
-        const options = {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(favMovies)
-        };
-        const response = await fetch(URL, options);
-        console.log(response);
-        const data = response.json();
-        console.log(data);
-    }
-    catch(error) {
-        console.log(error)
-    }
+////////////////////////////////////////////////////////////////////////////////////////////
+/*
+global variables
+ */
+////////////////////////////////////////////////////////////////////////////////////////////
+let movieCardsfav = document.querySelector('#movieCardsfav')
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+/*
+functions
+ */
+////////////////////////////////////////////////////////////////////////////////////////////
+
+const creatingFavMovieCards = async () =>{
+    const events = await getFavMovies()
+    console.log(events)
+    movieCardsfav.innerHTML = '';
+
+    events.forEach((movie) => {
+        movieCardsfav.innerHTML += `
+        <div class="card">
+            <div class="card-title">${movie.title}</div>
+    <div class="card-info">
+      <p>${movie.description}</p>
+      <div class="btn-holder d-flex justify-center align-center gap-2">
+        <div class="btn-holder d-flex justify-center align-center gap-5">
+            <button class="remove-movie btn" data-movieid="${movie.id}" data-movietitle="${movie.title}"  data-description="${movie.description}">
+            Remove Movie!!
+            </button>
+        </div>
+      </div>      
+        `
+        let rmvbtn = document.querySelectorAll('.remove-movie')
+        // console.log(addbtn)
+        rmvbtn.forEach( (button) => {
+            button.addEventListener('click' , () => {
+                let ids = button.getAttribute('data-movieid')
+                console.log(ids)
+                DeleteFavMovie(ids)
+                creatingFavMovieCards()
+            })
+        })
+    })
 }
 
-(async () => {
-    let getTheMovies = await getMovieList();
 
 
-})();
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+/*
+events
+ */
+////////////////////////////////////////////////////////////////////////////////////////////
+
+addEventListener('load', () => {
+    creatingFavMovieCards();
+})

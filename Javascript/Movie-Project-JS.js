@@ -46,7 +46,7 @@ const creatingMovieCards = async () => {
                 let movie = {
                     id: ids,
                     title: titles,
-                    description: descriptions
+                    description: descriptions,
                 }
                 postFavMovies(movie)
             })
