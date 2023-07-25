@@ -11,7 +11,7 @@ const getUserInputMovie = async (userMovieInput) => {
         }
         const response = await fetch(url, options)
         const data = await response.json();
-        return await data.results
+        return await data.results;
 
     } catch (error) {
         alert('something here')
@@ -61,7 +61,7 @@ const postFavMovies = async (moviedata) => {
         const response = await fetch(`${domain}/movies`, options);
         const apiResponse = response.json();
         console.log(apiResponse);
-        //json.parse()
+
         return apiResponse;
     } catch (error) {
         console.log(error.message)
