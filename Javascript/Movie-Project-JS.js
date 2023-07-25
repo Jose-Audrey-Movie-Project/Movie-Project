@@ -4,9 +4,13 @@ global variables
  */
 ////////////////////////////////////////////////////////////////////////////////////////////
 let searchBTN = document.querySelector('#searchBTN');
-let userSearch =''
-let searchContainer = document.querySelector('#searchbar')
-let movieCards = document.querySelector('#movieCards')
+let userSearch ='';
+let searchContainer = document.querySelector('#searchbar');
+let movieCards = document.querySelector('#movieCards');
+
+
+
+
 ////////////////////////////////////////////////////////////////////////////////////////////
 /*
 functions
@@ -33,6 +37,8 @@ searchContainer.addEventListener('keyup', () =>{
 searchBTN.addEventListener('click', async () =>{
     const events = await getUserInputMovie(userSearch);
     console.log(events);
+
+=======
     events.forEach((movie) =>{
         movieCards.innerHTML += `
 <div class="card" style="width: 18rem;">
@@ -55,5 +61,4 @@ searchBTN.addEventListener('click', async () =>{
       
         `
     })
-
 })

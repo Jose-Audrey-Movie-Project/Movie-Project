@@ -1,0 +1,20 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "pineapple express"
+    },
+    {
+      "id": 2,
+      "title": "barbie"
+    },
+    {
+      "title": "a movie",
+      "id": 3
+    },
+    {
+      "title": "a movie",
+      "id": 4
+    }
+  ]
+}
