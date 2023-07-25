@@ -7,8 +7,6 @@ let searchBTN = document.querySelector('#searchBTN');
 let userSearch ='';
 let searchContainer = document.querySelector('#searchbar');
 let movieCards = document.querySelector('#movieCards');
-// let addMovieToFavs = document.querySelector()
-
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////
@@ -19,7 +17,7 @@ functions
 const creatingMovieCards = async () =>{
     const events = await getUserInputMovie(userSearch);
     console.log(events);
-
+    movieCards.innerHTML = '';
     events.forEach((movie) =>{
         movieCards.innerHTML += `
 
@@ -67,3 +65,20 @@ searchContainer.addEventListener('keyup', () =>{
 })
 
 searchBTN.addEventListener('click', creatingMovieCards)
+searchContainer.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        creatingMovieCards();
+    }
+});
+
+movieCards.addEventListener('click', (event) => {
+    if (event.target.classList.contains('add-movie')) {
+        console.log('Add movie clicked');
+    }
+});
+
+movieCards.addEventListener('click', (event) => {
+    if (event.target.classList.contains('remove-movie')) {
+        console.log('remove movie clicked');
+    }
+});
