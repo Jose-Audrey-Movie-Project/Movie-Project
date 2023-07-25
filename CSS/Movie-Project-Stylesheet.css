@@ -12,6 +12,11 @@
     padding: unset;
     margin: unset;
 }
+.movie-poster {
+    max-height: 30vh;
+    max-width: 30vh;
+}
+
 /*Start Search Button CSS*/
 .searchBtn {
     padding: 0.5rem 0.5rem;
