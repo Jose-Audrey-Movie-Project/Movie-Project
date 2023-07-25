@@ -3,17 +3,26 @@
     --secondary-color:#0bd3d3;
     --third-color: #d0d0d0;
 }
+.header-nav {
+    background-color: white;
+    margin: unset;
+}
+.header-row {
+    width: 100%;
+    padding: unset;
+    margin: unset;
+}
 /*Start Search Button CSS*/
 .searchBtn {
     padding: 0.5rem 0.5rem;
     font-weight: 700;
-    background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.24);
     color: var(--secondary-color);
     border-radius: .5rem;
     border-bottom: 2px solid var(--main-color);
     border-right: 2px solid var(--main-color);
-    border-top: 2px solid white;
-    border-left: 2px solid white;
+    border-top: 2px solid rgba(255, 255, 255, 0.11);
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
     transition-duration: 1s;
     transition-property: border-top,
     border-left,
@@ -23,8 +32,8 @@
 }
 
 .searchBtn:hover {
-    border-top: 2px solid white;
-    border-left: 2px solid white;
+    border-top: 2px solid var(--secondary-color);
+    border-left: 2px solid var(--secondary-color);
     border-bottom: 2px solid var(--main-color);
     border-right: 2px solid var(--main-color);
     box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px;
@@ -265,7 +274,7 @@
     left: 3%;
     width: 95%;
     height: 40%;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     transition: 0.5s;
     transform-origin: center;
 }
@@ -278,7 +287,7 @@
     left: 3%;
     width: 95%;
     height: 40%;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     transition: 0.5s;
 }
 
