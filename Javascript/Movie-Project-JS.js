@@ -7,7 +7,7 @@ let searchBTN = document.querySelector('#searchBTN');
 let userSearch ='';
 let searchContainer = document.querySelector('#searchbar');
 let movieCards = document.querySelector('#movieCards');
-let addMovieToFavs = document.querySelector()
+// let addMovieToFavs = document.querySelector()
 
 
 
@@ -16,25 +16,7 @@ let addMovieToFavs = document.querySelector()
 functions
  */
 ////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-
-
-
-////////////////////////////////////////////////////////////////////////////////////////////
-/*
-events
- */
-////////////////////////////////////////////////////////////////////////////////////////////
-searchContainer.addEventListener('keyup', () =>{
-    userSearch = searchContainer.value.toLowerCase()
-    console.log(userSearch)
-})
-
-searchBTN.addEventListener('click', async () =>{
+const creatingMovieCards = async () =>{
     const events = await getUserInputMovie(userSearch);
     console.log(events);
 
@@ -56,7 +38,25 @@ searchBTN.addEventListener('click', async () =>{
 
 </div>
 
-      
+
         `
     })
+}
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+/*
+events
+ */
+////////////////////////////////////////////////////////////////////////////////////////////
+searchContainer.addEventListener('keyup', () =>{
+    userSearch = searchContainer.value.toLowerCase()
+    console.log(userSearch)
 })
+
+searchBTN.addEventListener('click', creatingMovieCards)
