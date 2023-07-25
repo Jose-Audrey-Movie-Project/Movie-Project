@@ -73,19 +73,41 @@ const postFavMovies = async (moviedata) =>{
 }
 
 //DELETING FAVORITE MOVIES
-const DeleteFavMovie = async (movieTitle) => {
+const DeleteFavMovie = async (movieID) => {
     try{
-        const URL = `${domain}/movies`;
+        const URL = `${domain}/movies/${movieID}`;
         const options = {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
             },
         };
+        const response =await fetch(URL, options);
+        const data = await response.json()
+        return data;
 
     }
     catch (error) {
         console.log(error.message)
+    }
+}
+
+//EDITING FAVORITE MOVIES
+const EditFavMovie = async (movieID) => {
+    try{
+        const URL = `${domain}/movies/${movieID}`
+        const options = {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(movieID)
+        };
+        const response = await fetch(URL, options);
+        const data = response.json()
+    }
+    catch(error) {
+        console.log(error)
     }
 }
 
@@ -98,6 +120,6 @@ const DeleteFavMovie = async (movieTitle) => {
     //     title: 'a movie'
     // }
     // postFavMovies(movie)
-
+    // const deletemov = await DeleteFavMovie(3)
 
 })();
