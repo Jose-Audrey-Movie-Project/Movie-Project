@@ -22,4 +22,5 @@ const getMovieList = async (favMovies) => {
 (async () => {
     let getTheMovies = await getMovieList();
 
+
 })();
