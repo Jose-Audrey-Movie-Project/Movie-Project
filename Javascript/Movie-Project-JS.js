@@ -18,6 +18,7 @@ const creatingMovieCards = async () => {
     const events = await getUserInputMovie(userSearch);
     console.log(events)
     movieCards.innerHTML = '';
+
     events.forEach((movie) => {
         movieCards.innerHTML += `
 
@@ -48,9 +49,9 @@ const creatingMovieCards = async () => {
                     id: ids,
                     title: titles
                 }
-                async function addingmov  (movie){
+                async function addingmov(movie){
                 let adder = await postFavMovies(movie)
-                    return adder
+                    return adder;
                 }
                 addingmov();
 
@@ -59,7 +60,10 @@ const creatingMovieCards = async () => {
     })
 }
 
-
+const movie = {
+    title: 'a movie'
+}
+console.log(postFavMovies(movie));
 ////////////////////////////////////////////////////////////////////////////////////////////
 /*
 events

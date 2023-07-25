@@ -1,5 +1,8 @@
-{
+git{
   "movies": [
-
+    {
+      "title": "a movie",
+      "id": 1
+    }
   ]
 }
