@@ -1,34 +1,10 @@
 {
   "movies": [
     {
-      "id": "507086",
-      "title": "Jurassic World Dominion",
-      "description": "Four years after Isla Nublar was destroyed, dinosaurs now live—and hunt—alongside humans all over the world. This fragile balance will reshape the future and determine, once and for all, whether human beings are to remain the apex predators ona planet they now share with history's most fearsome creatures."
-    },
-    {
-      "id": "135397",
-      "title": "Jurassic World",
-      "description": "Twenty-two years after the events of Jurassic Park, Isla Nublar now features a fully functioning dinosaur theme park, Jurassic World, as originally envisioned by John Hammond."
-    },
-    {
-      "id": "351286",
-      "title": "Jurassic World: Fallen Kingdom",
-      "description": "Three years after Jurassic World was destroyed, Isla Nublar now sits abandoned. When the island's dormant volcano begins roaring to life, Owen and Claire mount a campaign to rescue the remaining dinosaurs from this extinction-level event."
-    },
-    {
-      "id": "346698",
-      "title": "Barbie",
-      "description": "Barbie and Ken are having the time of their lives in the colorful and seemingly perfect world of Barbie Land. However, when they get a chance to go to the real world, they soon discover the joys and perils of living among humans."
-    },
-    {
-      "id": "16418",
-      "title": "Barbie Presents: Thumbelina",
-      "description": "Meet a tiny girl named Thumbelina who lives in harmony with nature in the magical world of the Twillerbees that's hidden among the wildflowers. At the whim of a spoiled young girl named Makena, Thumbelina and her two friends have their patch of wildflowers uprooted and are transported to a lavish apartment in the city."
-    },
-    {
-      "id": "13002",
-      "title": "Barbie in the 12 Dancing Princesses",
-      "description": "King Randolph sends for his cousin, Duchess Rowena, to help turn his daughters, Princess Genevieve and her eleven sisters, into royal material. But the Duchess strips the sisters of their fun, including their favorite pastime: dancing. When all hope may be lost, the sisters discover a secret passageway to a magical land where they can dance the night away."
+      "id": "502356",
+      "image": "https://image.tmdb.org/t/p/original/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg",
+      "title": "The Super Mario Bros. Movie",
+      "description": "While working underground to fix a water main, Brooklyn plumbers—and brothers—Mario and Luigi are transported down a mysterious pipe and wander into a magical new world. But when the brothers are separated, Mario embarks on an epic quest to find Luigi."
     }
   ]
 }

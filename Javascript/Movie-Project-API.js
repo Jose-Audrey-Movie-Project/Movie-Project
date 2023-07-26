@@ -88,15 +88,15 @@ const DeleteFavMovie = async (movieID) => {
 }
 
 //EDITING FAVORITE MOVIES
-const EditFavMovie = async (movieID) => {
+const EditFavMovie = async (movie) => {
     try {
-        const URL = `${domain}/movies/${movieID}`
+        const URL = `${domain}/movies/${movie.id}`
         const options = {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(movieID)
+            body: JSON.stringify(movie)
         };
         const response = await fetch(URL, options);
         const data = response.json()
@@ -109,9 +109,14 @@ const EditFavMovie = async (movieID) => {
 (async () => {
     // const getfavmov = await getFavMovies();
     // console.log(getfavmov);
-    // const movie = {
-    //     title: 'a movie'
-    // }
+    const movie = {
+        id: 691112,
+        title: 'a movie',
+        description: '',
+        stars: '',
+        image: ''
+    }
     // postFavMovies(movie)
     // const deletemov = await DeleteFavMovie(3)
+    await EditFavMovie(movie)
 })();

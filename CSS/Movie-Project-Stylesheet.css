@@ -305,3 +305,7 @@
     color: var(--main-color);
 }
 /*  End of favorite movies tab*/
+/*checked star*/
+.checked {
+    color: orange;
+}
