@@ -94,7 +94,7 @@ body {
 
 .inputbox input:valid ~span,
 .inputbox input:focus ~span {
-    color:;
+    color: white;
     transform: translateX(-10px) translateY(-34px);
     font-size: 0.75em;
 }
