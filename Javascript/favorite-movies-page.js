@@ -36,9 +36,15 @@ const creatingFavMovieCards = async () =>{
                      <button class="remove-movie btn" data-movieid="${movie.id}" data-movietitle="${movie.title}"  data-description="${movie.description}">
                       Remove Movie!! </button>
                 </div>
-                    <div class="stars-holder">
-                         ${movie.stars}
-                    </div>
+                    
+                         <div class="d-flex justify-content-center align-items-center m-2 stars-holder">
+                                <span data-star-id="1" class="fa fa-star"></span>
+                                <span data-star-id="2" class="fa fa-star"></span>
+                                <span data-star-id="3"  class="fa fa-star"></span>
+                                <span data-star-id="4"  class="fa fa-star"></span>
+                                <span data-star-id="5"  class="fa fa-star"></span>
+                         </div>
+                  
         </div>
         `
         let rmvbtn = document.querySelectorAll('.remove-movie');
@@ -50,34 +56,64 @@ const creatingFavMovieCards = async () =>{
                 creatingFavMovieCards()
             })
         })
-        let rate = false
-        let rateStars = document.querySelectorAll('.fa');
-        rateStars.forEach((star) => {
-            console.log('foreach star', star)
-            star.addEventListener('click',  (e) => {
-                let ids = movie.id;
-                console.log('current movie id :',ids)
-                if(!rate){
-                    star.classList.add('checked')
-                    console.log('stars', star)
-                    let ratemovie = {
-                        id: movie.id,
-                        image: movie.image,
-                        title: movie.title,
-                        description: movie.description,
-                        stars: ''
-                    }
-                    rate = true;
-                    EditFavMovie(ratemovie)
-                    // EditFavMovie(ratemovie)
-                }else {
-                    e.target.classList.remove('checked')
-                    rate = false
-                    EditFavMovie(ids)
-                }
+        let starones = document.querySelectorAll(`[data-star-id="1"]`)
+        let startwos = document.querySelectorAll(`[data-star-id="2"]`)
+        let starthrees = document.querySelectorAll(`[data-star-id="3"]`)
+        let starfours = document.querySelectorAll(`[data-star-id="4"]`)
+        let starfives = document.querySelectorAll(`[data-star-id="5"]`)
+        let onestar;
+        let twostar;
+        let threestar;
+        let fourstar;
+        let fivestar;
+
+
+
+        let clicked = false;
+        starones.forEach((starone) => {
+            starone.addEventListener('click',() => {
+                onestar = starone.classList.add('checked')
+                return onestar
+            })
+        })
+        startwos.forEach((startwo) => {
+            startwo.addEventListener('click',() => {
+                onestar
+                twostar = startwo.classList.add('checked')
+                return twostar
+            })
+        })
+        starthrees.forEach((starthree) => {
+            starthree.addEventListener('click',() => {
+                onestar
+                twostar
+                threestar = starthree.classList.add('checked')
+                return threestar
+            })
+        })
+        starfours.forEach((starfour) => {
+            starfour.addEventListener('click', () => {
+                onestar
+                twostar
+                threestar
+                fourstar = starfour.classList.add('checked')
+                return fourstar
+            })
+        })
+        starfives.forEach((starfive) => {
+            starfive.addEventListener('click', () => {
+                onestar
+                twostar
+                threestar
+                fourstar
+                fivestar = starfive.classList.add('checked')
+                return fivestar
 
             })
         })
+
+
+
     })
 }
 

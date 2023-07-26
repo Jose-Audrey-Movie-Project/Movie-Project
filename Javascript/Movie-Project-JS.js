@@ -42,6 +42,7 @@ const creatingMovieCards = async () => {
 
         `
 
+
         let addbtn = document.querySelectorAll('.add-movie')
         addbtn.forEach((button) => {
             button.addEventListener('click', () => {
@@ -54,11 +55,7 @@ const creatingMovieCards = async () => {
                     image: images,
                     title: titles,
                     description: descriptions,
-                    stars: `<div class="d-flex justify-content-center align-items-center m-2"><span data-star-id="1" class="fa fa-star"></span>
-<span data-star-id="2" class="fa fa-star"></span>
-<span data-star-id="3"  class="fa fa-star"></span>
-<span data-star-id="4"  class="fa fa-star"></span>
-<span data-star-id="5"  class="fa fa-star"></span></div>`
+                    stars: ``
                 }
                 postFavMovies(movie);
             })
